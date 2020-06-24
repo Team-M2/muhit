@@ -1,0 +1,23 @@
+# muhit - Çevremde Ne Var?
+## Bu uygulama Huawei Mobile Services (HMS) ekosistemi içerisinde lokasyon bazlı işlemler için kullanılan Map Kit, Location Kit ve Site Kit kullanımını tanıtmak amacıyla hazırlanmış bir referans uygulamasıdır.
+
+
+### Uygulama Tanıtımı
+
+- Uygulamayı açtığınız zaman karşınıza tam ekran bir harita gelir. Bu harita Huawei Map Kit ile sağlanmaktadır.
+- Lokasyon kullanım izni verdiğiniz takdirde Huawei Location Kit sayesinde anlık olarak bulunduğunuz lokasyon bilgisi elde edilir.
+- Elde edilen lokasyon bilginiz Huawei Site Kit'e gönderilerek bulunduğunuz konuma en yakın POI'lere ulaşılır. (POI: Point of Interest)
+- Ekranda yer alan açılır kutudan görmek istediğiniz POI tipini seçersiniz ve Huawei Site Kit'in sağladığı veriler sayesinde size en yakın POI listesi oluşturulur.
+- Bu listede yer alan bilgiler işlenerek Huawei Map'e marker (pin) olarak eklenir.
+- Örneğin listeden ATM'i seçtiğiniz zaman size en yakın ATM'leri harita üzerinde hızlıca görebilirsiniz.
+
+
+### Bilinmesi Gerekenler
+- Uygulama tamamen HMS ile yazıldığı için cihazınızda HMS Core'un yüklü olması gerekmektedir.
+- 2020 sonrası üretilen Huawei cihazlarda uygulama sorunsuz şekilde çalışmaktadır.
+- HMS Core'a sahip olmayan Android cihazlar için son versiyonu şu linkten indirebilirsiniz; https://tik.to/9L6
+
+
+### Yapılacaklar
+- Listelenen POI'ler için özel ikon gösterimi
+- ...
