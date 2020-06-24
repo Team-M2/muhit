@@ -31,7 +31,6 @@
 
 ### Bilinmesi Gerekenler
 - Uygulama tamamen HMS ile yazıldığı için cihazınızda HMS Core'un yüklü olması gerekmektedir.
-- 2020 sonrası üretilen Huawei cihazlarda uygulama sorunsuz şekilde çalışmaktadır.
 - HMS Core'a sahip olmayan Android cihazlar için son versiyonu şu linkten indirebilirsiniz; https://tik.to/9L6
 
 
