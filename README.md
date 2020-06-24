@@ -18,6 +18,7 @@
 ## Bu uygulama Huawei Mobile Services (HMS) ekosistemi içerisinde lokasyon bazlı işlemler için kullanılan Map Kit, Location Kit ve Site Kit kullanımını tanıtmak amacıyla hazırlanmış bir referans uygulamasıdır.
 
 
+
 ### Uygulama Tanıtımı
 
 - Uygulamayı açtığınız zaman karşınıza tam ekran bir harita gelir. Bu harita Huawei Map Kit ile sağlanmaktadır.
@@ -37,3 +38,6 @@
 ### Yapılacaklar
 - Listelenen POI'ler için özel ikon gösterimi
 - ...
+
+
+### Apk olarak indirmek için <a href="https://www.yuklio.com/04phL" target="_blank">tıklayınız</a>
