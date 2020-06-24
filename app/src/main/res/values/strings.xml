@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">muhit - Çevremde Ne Var?</string>
+    <string name="clearAllMarkers">Temizle</string>
+    <string name="selectOne">Bir Seçim Yapın</string>
+</resources>
