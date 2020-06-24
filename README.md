@@ -40,4 +40,10 @@
 - ...
 
 
+### Yararlanılan Kaynaklar
+- https://medium.com/huawei-developers-tr/huawei-harita-servisi-581826f8e2a5
+- https://medium.com/@mine1810/how-to-customize-marker-information-window-60b497ffdb83
+- https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
+
+
 ### Apk olarak indirmek için <a href="https://www.yuklio.com/04phL" target="_blank">tıklayınız</a>
