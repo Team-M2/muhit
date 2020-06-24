@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.os.Build;
 import android.util.Log;
 
@@ -17,19 +16,18 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 import java.util.Stack;
 
 import kodz.org.muhit.Models.PoiTypeModel;
 
 public class Utils {
 
-    static final String TAG = "muhit";
+    public static final String TAG = "muhit";
     ArrayList<PoiTypeModel> poiTypeList;
 
-    public static String getApiKey() {
+    public static String getApiKey(Context context) {
 
-        String apiKey = "CV8Bi0AC7BMYpuAPzEU894pZJvwlzO8bIgR7z+aMSaZ+Dm6+CMNci6tZHJAeF0fHiAYvpFWy4iMxbGBFHCSSHwPyhTqs";
+        String apiKey = context.getString(R.string.apikey);
         try {
             String encodedApiKey = URLEncoder.encode(apiKey, "utf-8");
             return encodedApiKey;
@@ -64,34 +62,33 @@ public class Utils {
         }
     }
 
-    public ArrayList<PoiTypeModel> getPoiTypeList() {
+    public ArrayList<PoiTypeModel> getPoiTypeList(Context context) {
         poiTypeList = new ArrayList<>();
         poiTypeList.clear();
 
-        poiTypeList.add(new PoiTypeModel("Bir Seçim Yapın", null, R.drawable.icon_place));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.selectOne), null, R.drawable.icon_place));
 
-        poiTypeList.add(new PoiTypeModel("Hastane", LocationType.HOSPITAL, R.drawable.icon_hospital));
-        poiTypeList.add(new PoiTypeModel("Sinema", LocationType.MOVIE_THEATER, R.drawable.icon_cinema));
-        poiTypeList.add(new PoiTypeModel("Kafe", LocationType.CAFE, R.drawable.icon_cafe));
-        poiTypeList.add(new PoiTypeModel("ATM", LocationType.ATM, R.drawable.icon_atm));
-        poiTypeList.add(new PoiTypeModel("Banka", LocationType.BANK, R.drawable.icon_bank));
-        poiTypeList.add(new PoiTypeModel("Park", LocationType.PARK, R.drawable.icon_park));
-        poiTypeList.add(new PoiTypeModel("Oto Park", LocationType.PARKING, R.drawable.icon_parking));
-        poiTypeList.add(new PoiTypeModel("Fırın", LocationType.BAKERY, R.drawable.icon_bakery));
-
-        poiTypeList.add(new PoiTypeModel("Okul", LocationType.SCHOOL, R.drawable.icon_school));
-        poiTypeList.add(new PoiTypeModel("Restorant", LocationType.FOOD, R.drawable.icon_restaurant));
-        poiTypeList.add(new PoiTypeModel("Polis Karakolu", LocationType.POLICE, R.drawable.icon_police));
-        poiTypeList.add(new PoiTypeModel("Cami", LocationType.MOSQUE, R.drawable.icon_mosque));
-        poiTypeList.add(new PoiTypeModel("Spor Salonu", LocationType.GYM, R.drawable.icon_gym));
-        poiTypeList.add(new PoiTypeModel("Benzin İstasyonu", LocationType.GAS_STATION, R.drawable.icon_gas_station));
-        poiTypeList.add(new PoiTypeModel("Güzellik Salonu", LocationType.BEAUTY_SALON, R.drawable.icon_beauty));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.hospital), LocationType.HOSPITAL, R.drawable.icon_hospital));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.movie_theater), LocationType.MOVIE_THEATER, R.drawable.icon_cinema));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.cafe), LocationType.CAFE, R.drawable.icon_cafe));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.atm), LocationType.ATM, R.drawable.icon_atm));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.bank), LocationType.BANK, R.drawable.icon_bank));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.park), LocationType.PARK, R.drawable.icon_park));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.parking), LocationType.PARKING, R.drawable.icon_parking));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.bakery), LocationType.BAKERY, R.drawable.icon_bakery));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.school), LocationType.SCHOOL, R.drawable.icon_school));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.food), LocationType.FOOD, R.drawable.icon_restaurant));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.police_station), LocationType.POLICE, R.drawable.icon_police));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.mosque), LocationType.MOSQUE, R.drawable.icon_mosque));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.gym), LocationType.GYM, R.drawable.icon_gym));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.gas_station), LocationType.GAS_STATION, R.drawable.icon_gas_station));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.beauty_salon), LocationType.BEAUTY_SALON, R.drawable.icon_beauty));
 
         return poiTypeList;
     }
 
 
-    public Integer getColor(int id){
+    public Integer getColor(int id) {
         Stack recycle = new Stack<>();
         recycle.addAll(Arrays.asList(
                 0xfff44336, 0xffe91e63, 0xff9c27b0, 0xff673ab7,

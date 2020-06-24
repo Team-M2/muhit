@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">muhit - Closest Points of Interest</string>
+    <string name="clearAllMarkers">Clean</string>
+    <string name="selectOne">Make a choose</string>
+
+    <string name="hospital">Hospital</string>
+    <string name="movie_theater">Movie Theater</string>
+    <string name="cafe">Cafe</string>
+    <string name="atm">ATM</string>
+    <string name="bank">Bank</string>
+    <string name="park">Park</string>
+    <string name="parking">Parking</string>
+    <string name="bakery">Bakery</string>
+    <string name="school">School</string>
+    <string name="food">Restaurant</string>
+    <string name="police_station">Police Station</string>
+    <string name="mosque">Mosque</string>
+    <string name="gym">GYM</string>
+    <string name="gas_station">Gas Station</string>
+    <string name="beauty_salon">Beauty Centre</string>
+</resources>

@@ -41,5 +41,6 @@ dependencies {
 
     // HMS SiteKit Kit
     implementation 'com.huawei.hms:site:4.0.3.300'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
 

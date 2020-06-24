@@ -24,8 +24,8 @@ public class LocationKit {
     SettingsClient settingsClient;
     LocationRequest locationRequest;
     LocationCallback locationCallback;
-    LatLng currentlatLng;
-    MapKit map;
+    public LatLng currentlatLng;
+    public MapKit map;
 
     public void init(Context context, MapKit mmap) {
 

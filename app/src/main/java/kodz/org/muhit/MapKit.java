@@ -34,8 +34,8 @@ import kodz.org.muhit.Adapters.InfoWindowAdapter;
 public class MapKit extends AppCompatActivity implements OnMapReadyCallback, HuaweiMap.OnMarkerClickListener {
 
     Context context;
-    HuaweiMap huaweiMap;
-    MapView mapView;
+    public HuaweiMap huaweiMap;
+    public MapView mapView;
     CameraUpdate cameraUpdate;
     float zoom = 14.0f;
     static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";

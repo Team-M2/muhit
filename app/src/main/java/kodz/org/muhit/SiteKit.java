@@ -34,7 +34,7 @@ public class SiteKit {
     public void getPoiList(final LocationType locationType, String query, final int icon, Coordinate coordinate, final Integer color) {
 
         if (map.huaweiMap != null) {
-            searchService = SearchServiceFactory.create(context, Utils.getApiKey());
+            searchService = SearchServiceFactory.create(context, Utils.getApiKey(context));
             nearbySearchRequest = new NearbySearchRequest();
             nearbySearchRequest.setLocation(coordinate);
             //nearbySearchRequest.setQuery(query);

@@ -1,4 +1,4 @@
-package kodz.org.muhit;
+package kodz.org.muhit.UI;
 
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -16,7 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.huawei.hms.site.api.model.Coordinate;
 
 import kodz.org.muhit.Adapters.PoiTypeAdapter;
+import kodz.org.muhit.LocationKit;
+import kodz.org.muhit.MapKit;
 import kodz.org.muhit.Models.PoiTypeModel;
+import kodz.org.muhit.R;
+import kodz.org.muhit.SiteKit;
+import kodz.org.muhit.Utils;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -70,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
         // POI TYPE LIST
-        poiTypeAdapter = new PoiTypeAdapter(MainActivity.this, utils.getPoiTypeList());
+        poiTypeAdapter = new PoiTypeAdapter(MainActivity.this, utils.getPoiTypeList(getApplicationContext()));
         spnPoiTypes.setAdapter(poiTypeAdapter);
         int initialposition = spnPoiTypes.getSelectedItemPosition();
         spnPoiTypes.setSelection(initialposition, false);

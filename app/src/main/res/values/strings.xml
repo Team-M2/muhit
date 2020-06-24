@@ -1,5 +1,22 @@
 <resources>
+    <string name="apikey" translatable="false">CV8Bi0AC7BMYpuAPzEU894pZJvwlzO8bIgR7z+aMSaZ+Dm6+CMNci6tZHJAeF0fHiAYvpFWy4iMxbGBFHCSSHwPyhTqs</string>
     <string name="app_name">muhit - Çevremde Ne Var?</string>
     <string name="clearAllMarkers">Temizle</string>
     <string name="selectOne">Bir Seçim Yapın</string>
+
+    <string name="hospital">Hastane</string>
+    <string name="movie_theater">Sinema</string>
+    <string name="cafe">Kafe</string>
+    <string name="atm">ATM</string>
+    <string name="bank">Banka</string>
+    <string name="park">Park</string>
+    <string name="parking">Oto Park</string>
+    <string name="bakery">Fırın</string>
+    <string name="school">Okul</string>
+    <string name="food">Restorant</string>
+    <string name="police_station">Polis Karakolu</string>
+    <string name="mosque">Cami</string>
+    <string name="gym">Spor Salonu</string>
+    <string name="gas_station">Benzin İstasyonu</string>
+    <string name="beauty_salon">Güzellik Salonı</string>
 </resources>
