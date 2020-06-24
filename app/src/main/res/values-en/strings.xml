@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">muhit - Closest Points of Interest</string>
+    <string name="app_slogan">What are you looking for nearby?</string>
     <string name="clearAllMarkers">Clean</string>
     <string name="selectOne">Make a choose</string>
 

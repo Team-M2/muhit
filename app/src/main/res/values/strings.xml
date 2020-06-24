@@ -1,6 +1,7 @@
 <resources>
     <string name="apikey" translatable="false">CV8Bi0AC7BMYpuAPzEU894pZJvwlzO8bIgR7z+aMSaZ+Dm6+CMNci6tZHJAeF0fHiAYvpFWy4iMxbGBFHCSSHwPyhTqs</string>
     <string name="app_name">muhit - Çevremde Ne Var?</string>
+    <string name="app_slogan">Yakınlarda neyi arıyorsun?</string>
     <string name="clearAllMarkers">Temizle</string>
     <string name="selectOne">Bir Seçim Yapın</string>
 
