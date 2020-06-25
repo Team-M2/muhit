@@ -45,7 +45,7 @@
 - https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
 
 
-### <a href="https://www.yuklio.com/04phL" target="_blank"> Click here </a> to download as apk
+### <a href="https://www.yuklio.com/BBPyY" target="_blank"> Click here </a> to download as apk
 
 
 ----
@@ -81,4 +81,4 @@
 - https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
 
 
-### Apk olarak indirmek için <a href="https://www.yuklio.com/04phL" target="_blank">tıklayınız</a>
+### Apk olarak indirmek için <a href="https://www.yuklio.com/BBPyY" target="_blank">tıklayınız</a>
