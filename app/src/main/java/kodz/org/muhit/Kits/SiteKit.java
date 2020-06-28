@@ -1,4 +1,4 @@
-package kodz.org.muhit;
+package kodz.org.muhit.Kits;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,6 +14,9 @@ import com.huawei.hms.site.api.model.SearchStatus;
 import com.huawei.hms.site.api.model.Site;
 
 import java.util.List;
+import java.util.Locale;
+
+import kodz.org.muhit.Helpers.Utils;
 
 public class SiteKit {
 
@@ -37,10 +40,10 @@ public class SiteKit {
             searchService = SearchServiceFactory.create(context, Utils.getApiKey(context));
             nearbySearchRequest = new NearbySearchRequest();
             nearbySearchRequest.setLocation(coordinate);
-            //nearbySearchRequest.setQuery(query);
             nearbySearchRequest.setRadius(10000);
             nearbySearchRequest.setPoiType(locationType);
-            nearbySearchRequest.setLanguage("tr");
+            nearbySearchRequest.setLanguage(Locale.getDefault().getLanguage());
+            //nearbySearchRequest.setQuery(query);
             //nearbySearchRequest.setPageIndex(1);
             //request.setPageSize(5);
 

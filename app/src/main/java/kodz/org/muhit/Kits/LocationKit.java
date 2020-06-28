@@ -1,4 +1,4 @@
-package kodz.org.muhit;
+package kodz.org.muhit.Kits;
 
 import android.content.Context;
 import android.os.Looper;
@@ -17,6 +17,8 @@ import com.huawei.hms.location.SettingsClient;
 import com.huawei.hms.maps.model.LatLng;
 
 import java.util.List;
+
+import kodz.org.muhit.Helpers.Utils;
 
 public class LocationKit {
 

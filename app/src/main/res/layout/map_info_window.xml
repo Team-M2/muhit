@@ -45,6 +45,15 @@
             android:lineHeight="24dp"
             android:text="Adres" />
 
+        <Button
+            android:id="@+id/btnMarkerPhoneCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_custom_gradient"
+            android:text="@string/call"
+            android:textAllCaps="false"
+            android:visibility="gone"></Button>
+
         <!--
         <TextView
             android:id="@+id/txtMarkerPhone"

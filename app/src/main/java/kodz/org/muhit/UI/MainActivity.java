@@ -16,12 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.huawei.hms.site.api.model.Coordinate;
 
 import kodz.org.muhit.Adapters.PoiTypeAdapter;
-import kodz.org.muhit.LocationKit;
-import kodz.org.muhit.MapKit;
+import kodz.org.muhit.Kits.LocationKit;
+import kodz.org.muhit.Kits.MapKit;
 import kodz.org.muhit.Models.PoiTypeModel;
 import kodz.org.muhit.R;
-import kodz.org.muhit.SiteKit;
-import kodz.org.muhit.Utils;
+import kodz.org.muhit.Kits.SiteKit;
+import kodz.org.muhit.Helpers.Utils;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // LOCATION
         location = new LocationKit();
         location.init(this, map);
-        location.getLastLocation(); // or location.getLastLocationWithCallbak(); for tracking location change
+        location.getLastLocation(); // or location.getLastLocationWithCallbak(); for tracking location changes
 
         // SITE
         site = new SiteKit();

@@ -4,6 +4,7 @@
     <string name="app_slogan">What are you looking for nearby?</string>
     <string name="clearAllMarkers">Clean</string>
     <string name="selectOne">Make a choose</string>
+    <string name="call">Make a Phone Call</string>
 
     <string name="hospital">Hospital</string>
     <string name="movie_theater">Movie Theater</string>

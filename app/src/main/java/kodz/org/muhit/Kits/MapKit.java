@@ -1,4 +1,4 @@
-package kodz.org.muhit;
+package kodz.org.muhit.Kits;
 
 import android.app.Activity;
 import android.content.Context;
@@ -30,6 +30,8 @@ import com.huawei.hms.site.api.model.Site;
 import java.text.DecimalFormat;
 
 import kodz.org.muhit.Adapters.InfoWindowAdapter;
+import kodz.org.muhit.Helpers.Utils;
+import kodz.org.muhit.R;
 
 public class MapKit extends AppCompatActivity implements OnMapReadyCallback, HuaweiMap.OnMarkerClickListener {
 
@@ -117,55 +119,6 @@ public class MapKit extends AppCompatActivity implements OnMapReadyCallback, Hua
 
         LatLng position = new LatLng(site.getLocation().getLat(), site.getLocation().getLng());
 
-
-        /*
-        Drawable i = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            i = context.getDrawable(icon);
-            i.setColorFilter(Color.parseColor("#000000"), PorterDuff.Mode.MULTIPLY);
-        }
-        BitmapDescriptor markerIcon = getMarkerIconFromDrawable(i);
-         */
-
-        //BitmapDescriptor markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.icon_marker);
-
-        /*
-        BitmapDescriptor markerIcon = BitmapDescriptorFactory.defaultMarker();
-
-        if (type == LocationType.CAFE) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE);
-        }
-
-        if (type == LocationType.ATM) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
-        }
-
-        if (type == LocationType.BAKERY) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW);
-        }
-
-        if (type == LocationType.BANK) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE);
-        }
-
-        if (type == LocationType.PARKING) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET);
-        }
-
-        if (type == LocationType.PARK) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED);
-        }
-
-        if (type == LocationType.HOSPITAL) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA);
-        }
-
-        if (type == LocationType.MOVIE_THEATER) {
-            markerIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN);
-        }
-         */
-
-
         BitmapDescriptor mi = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
 
@@ -182,7 +135,6 @@ public class MapKit extends AppCompatActivity implements OnMapReadyCallback, Hua
             Bitmap o = overlay(m, i);
             mi = BitmapDescriptorFactory.fromBitmap(o);
         }
-
 
         MarkerOptions markerOptions = new MarkerOptions()
                 .title(title)

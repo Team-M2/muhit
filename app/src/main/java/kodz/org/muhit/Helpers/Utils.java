@@ -1,4 +1,4 @@
-package kodz.org.muhit;
+package kodz.org.muhit.Helpers;
 
 import android.Manifest;
 import android.app.Activity;
@@ -19,6 +19,7 @@ import java.util.Collections;
 import java.util.Stack;
 
 import kodz.org.muhit.Models.PoiTypeModel;
+import kodz.org.muhit.R;
 
 public class Utils {
 
