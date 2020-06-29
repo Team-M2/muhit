@@ -9,6 +9,7 @@
     <string name="hospital">Hospital</string>
     <string name="movie_theater">Movie Theater</string>
     <string name="cafe">Cafe</string>
+    <string name="super_market">Super Market</string>
     <string name="atm">ATM</string>
     <string name="bank">Bank</string>
     <string name="park">Park</string>
@@ -22,4 +23,5 @@
     <string name="gym">GYM</string>
     <string name="gas_station">Gas Station</string>
     <string name="beauty_salon">Beauty Centre</string>
+    <string name="bus_station">Bus Station</string>
 </resources>

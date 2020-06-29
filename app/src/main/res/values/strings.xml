@@ -9,6 +9,7 @@
     <string name="hospital">Hastane</string>
     <string name="movie_theater">Sinema</string>
     <string name="cafe">Kafe</string>
+    <string name="super_market">Market</string>
     <string name="atm">ATM</string>
     <string name="bank">Banka</string>
     <string name="park">Park</string>
@@ -21,5 +22,6 @@
     <string name="church">Kilise</string>
     <string name="gym">Spor Salonu</string>
     <string name="gas_station">Benzin İstasyonu</string>
-    <string name="beauty_salon">Güzellik Salonı</string>
+    <string name="beauty_salon">Güzellik Salonu</string>
+    <string name="bus_station">Otobüs Durağı</string>
 </resources>

@@ -3,6 +3,7 @@ package kodz.org.muhit.UI;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -16,12 +17,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.huawei.hms.site.api.model.Coordinate;
 
 import kodz.org.muhit.Adapters.PoiTypeAdapter;
+import kodz.org.muhit.Helpers.Utils;
 import kodz.org.muhit.Kits.LocationKit;
 import kodz.org.muhit.Kits.MapKit;
+import kodz.org.muhit.Kits.SiteKit;
 import kodz.org.muhit.Models.PoiTypeModel;
 import kodz.org.muhit.R;
-import kodz.org.muhit.Kits.SiteKit;
-import kodz.org.muhit.Helpers.Utils;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Button btnClearAllMarkers;
     Spinner spnPoiTypes;
     View divider;
+    Bundle savedInstanceState;
 
     Utils utils;
     MapKit map;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        savedInstanceState = savedInstanceState;
 
         // Hide status bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -116,6 +119,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        Log.d(Utils.TAG + " requestCode", requestCode + "");
+        Log.d(Utils.TAG + " permissions 0", permissions[0]);
+        Log.d(Utils.TAG + " permissions 3", permissions[1]);
+        Log.d(Utils.TAG + " permissions 2", permissions[2]);
+        Log.d(Utils.TAG + " grantResults 0", String.valueOf(grantResults[0]));
+        Log.d(Utils.TAG + " grantResults 1", String.valueOf(grantResults[1]));
+        Log.d(Utils.TAG + " grantResults 2", String.valueOf(grantResults[2]));
+
         if (requestCode == 1) {
             if (grantResults.length > 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED
                     && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
@@ -126,13 +138,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         if (requestCode == 2) {
-            if (grantResults.length > 2 && grantResults[2] == PackageManager.PERMISSION_GRANTED
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED
-                    && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-                Log.i(Utils.TAG, "onRequestPermissionsResult: apply ACCESS_BACKGROUND_LOCATION successful");
+
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                if (grantResults[2] == PackageManager.PERMISSION_GRANTED) {
+                    Log.i(Utils.TAG, "onRequestPermissionsResult: apply ACCESS_BACKGROUND_LOCATION successful");
+                }
+
+                location.getLastLocation();
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        map.huaweiMap.setMyLocationEnabled(true);
+                        map.setCamera(location.currentlatLng);
+
+                    }
+                }, 1700);
+
+
             } else {
-                Log.i(Utils.TAG, "onRequestPermissionsResult: apply ACCESS_BACKGROUND_LOCATION  failed");
+                Log.i(Utils.TAG, "onRequestPermissionsResult: Permission Denied by User!!");
             }
+
         }
     }
 

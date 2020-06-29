@@ -72,8 +72,10 @@ public class Utils {
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.hospital), LocationType.HOSPITAL, R.drawable.icon_hospital));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.movie_theater), LocationType.MOVIE_THEATER, R.drawable.icon_cinema));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.cafe), LocationType.CAFE, R.drawable.icon_cafe));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.super_market), LocationType.SUPERMARKET, R.drawable.icon_market));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.atm), LocationType.ATM, R.drawable.icon_atm));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.bank), LocationType.BANK, R.drawable.icon_bank));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.bus_station), LocationType.BUS_STATION, R.drawable.icon_bus));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.park), LocationType.PARK, R.drawable.icon_park));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.parking), LocationType.PARKING, R.drawable.icon_parking));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.bakery), LocationType.BAKERY, R.drawable.icon_bakery));
