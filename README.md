@@ -49,13 +49,13 @@
 
 <table width="100%">
     <tbody width="100%">
-        <tr width="100%">
-            <td>
+        <tr style="float:left; width:100%;">
+            <td style="float:left; width:50%;">
                 <a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank" style="float:right">
                     <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
                 </a>
             </td>
-            <td align="right">
+            <td style="float:left; width:50%; text-align:right;" align="right">
                 <img src="https://www.yuklio.com/f/ym46M-qr-muhit-ag.png">
             </td>
         </tr>
