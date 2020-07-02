@@ -67,7 +67,7 @@ public class Utils {
         poiTypeList = new ArrayList<>();
         poiTypeList.clear();
 
-        poiTypeList.add(new PoiTypeModel(context.getString(R.string.selectOne), null, R.drawable.icon_place));
+        poiTypeList.add(new PoiTypeModel(context.getString(R.string.select_one), null, R.drawable.icon_place));
 
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.hospital), LocationType.HOSPITAL, R.drawable.icon_hospital));
         poiTypeList.add(new PoiTypeModel(context.getString(R.string.movie_theater), LocationType.MOVIE_THEATER, R.drawable.icon_cinema));

@@ -45,8 +45,11 @@
 - https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
 
 
-### <a href="https://www.yuklio.com/9teBd" target="_blank"> Click here </a> to download as apk
+### <a href="https://drive.google.com/drive/folders/1Q-g7a7s85Rs_p0B9Rf7pY04SFLPvyPd7?usp=sharing" target="_blank"> Click here </a> to download as apk
 
+<a href="https://tik.to/4od" target="_blank">
+    <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
+</a>
 
 ----
 
@@ -81,4 +84,8 @@
 - https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
 
 
-### Apk olarak indirmek için <a href="https://www.yuklio.com/9teBd" target="_blank">tıklayınız</a>
+### Apk olarak indirmek için <a href="https://drive.google.com/drive/folders/1Q-g7a7s85Rs_p0B9Rf7pY04SFLPvyPd7?usp=sharing" target="_blank">tıklayınız</a>
+
+<a href="https://tik.to/4od" target="_blank">
+    <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
+</a>

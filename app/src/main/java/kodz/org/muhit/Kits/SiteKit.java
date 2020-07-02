@@ -2,6 +2,7 @@ package kodz.org.muhit.Kits;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.huawei.hms.site.api.SearchResultListener;
 import com.huawei.hms.site.api.SearchService;
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Locale;
 
 import kodz.org.muhit.Helpers.Utils;
+import kodz.org.muhit.R;
 
 public class SiteKit {
 
@@ -40,9 +42,9 @@ public class SiteKit {
             searchService = SearchServiceFactory.create(context, Utils.getApiKey(context));
             nearbySearchRequest = new NearbySearchRequest();
             nearbySearchRequest.setLocation(coordinate);
-            nearbySearchRequest.setRadius(10000);
+            nearbySearchRequest.setRadius(20000);
             nearbySearchRequest.setPoiType(locationType);
-            nearbySearchRequest.setLanguage(Locale.getDefault().getLanguage());
+            //nearbySearchRequest.setLanguage(Locale.getDefault().getLanguage());
             //nearbySearchRequest.setQuery(query);
             //nearbySearchRequest.setPageIndex(1);
             //request.setPageSize(5);
@@ -52,6 +54,7 @@ public class SiteKit {
                 public void onSearchResult(NearbySearchResponse results) {
                     List<Site> sites = results.getSites();
                     if (results == null || results.getTotalCount() <= 0 || sites == null || sites.size() <= 0) {
+                        Toast.makeText(context, context.getString(R.string.poi_not_found), Toast.LENGTH_SHORT).show();
                         return;
                     }
                     for (Site site : sites) {

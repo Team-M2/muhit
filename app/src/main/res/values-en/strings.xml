@@ -2,9 +2,11 @@
 <resources>
     <string name="app_name">muhit - Closest Points of Interest</string>
     <string name="app_slogan">What are you looking for nearby?</string>
-    <string name="clearAllMarkers">Clean</string>
-    <string name="selectOne">Make a choose</string>
+    <string name="clear_all_markers">Clean</string>
+    <string name="select_one">Make a choose</string>
     <string name="call">Make a Phone Call</string>
+    <string name="poi_not_found">No Results Found!</string>
+
 
     <string name="hospital">Hospital</string>
     <string name="movie_theater">Movie Theater</string>

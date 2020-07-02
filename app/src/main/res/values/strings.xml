@@ -2,9 +2,10 @@
     <string name="apikey" translatable="false">CV8Bi0AC7BMYpuAPzEU894pZJvwlzO8bIgR7z+aMSaZ+Dm6+CMNci6tZHJAeF0fHiAYvpFWy4iMxbGBFHCSSHwPyhTqs</string>
     <string name="app_name">muhit - Çevremde Ne Var?</string>
     <string name="app_slogan">Yakınlarda neyi arıyorsun?</string>
-    <string name="clearAllMarkers">Temizle</string>
-    <string name="selectOne">Bir Seçim Yapın</string>
+    <string name="clear_all_markers">Temizle</string>
+    <string name="select_one">Bir Seçim Yapın</string>
     <string name="call">Telefon Et</string>
+    <string name="poi_not_found">Uygun Sonuç Bulunamadı!</string>
 
     <string name="hospital">Hastane</string>
     <string name="movie_theater">Sinema</string>

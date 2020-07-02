@@ -87,7 +87,7 @@
                         android:drawablePadding="4dp"
                         android:onClick="clearAllMarkers"
                         android:padding="8dp"
-                        android:text="@string/clearAllMarkers"
+                        android:text="@string/clear_all_markers"
                         android:textAllCaps="false" />
                 </LinearLayout>
 
