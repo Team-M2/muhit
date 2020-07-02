@@ -97,8 +97,17 @@
 
 ### Apk olarak indirmek için <a href="https://yadi.sk/d/xsx0CNeHu5bNkQ" target="_blank">tıklayınız</a>
 
-<a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank">
-    <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
-</a>
-<br>
-<img src="https://www.yuklio.com/f/ym46M-qr-muhit-ag.png">
+<table width="100%">
+    <tbody style="float:left; width:100%;">
+        <tr style="float:left; width:100%;">
+            <td style="float:left; width:50%;">
+                <a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank" style="float:right">
+                    <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
+                </a>
+            </td>
+            <td style="float:left; width:50%; text-align:right;" align="right">
+                <img src="https://www.yuklio.com/f/ym46M-qr-muhit-ag.png">
+            </td>
+        </tr>
+    </tbody>
+</table>
