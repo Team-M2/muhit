@@ -47,14 +47,14 @@
 
 ### <a href="https://yadi.sk/d/xsx0CNeHu5bNkQ" target="_blank"> Click here </a> to download as apk
 
-<table>
+<table width="100%">
     <tr>
         <td>
             <a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank" style="float:right">
                 <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
             </a>
         </td>
-        <td>
+        <td align="right">
             <img src="https://www.yuklio.com/f/ym46M-qr-muhit-ag.png">
         </td>
     </tr>
