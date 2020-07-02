@@ -48,7 +48,7 @@
 ### <a href="https://yadi.sk/d/xsx0CNeHu5bNkQ" target="_blank"> Click here </a> to download as apk
 
 <table width="100%">
-    <tbody width="100%">
+    <tbody style="float:left; width:100%;">
         <tr style="float:left; width:100%;">
             <td style="float:left; width:50%;">
                 <a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank" style="float:right">
