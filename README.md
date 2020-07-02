@@ -45,11 +45,13 @@
 - https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
 
 
-### <a href="https://drive.google.com/drive/folders/1Q-g7a7s85Rs_p0B9Rf7pY04SFLPvyPd7?usp=sharing" target="_blank"> Click here </a> to download as apk
+### <a href="https://yadi.sk/d/xsx0CNeHu5bNkQ" target="_blank"> Click here </a> to download as apk
 
 <a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank" style="float:right">
     <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
 </a>
+<br>
+<img src="https://www.yuklio.com/f/ym46M-qr-muhit-ag.png">
 
 ----
 
@@ -84,8 +86,10 @@
 - https://medium.com/@mine1810/how-to-get-places-with-using-hms-site-kit-562245b6c10e
 
 
-### Apk olarak indirmek için <a href="https://drive.google.com/drive/folders/1Q-g7a7s85Rs_p0B9Rf7pY04SFLPvyPd7?usp=sharing" target="_blank">tıklayınız</a>
+### Apk olarak indirmek için <a href="https://yadi.sk/d/xsx0CNeHu5bNkQ" target="_blank">tıklayınız</a>
 
 <a href="https://appgallery7.huawei.com/#/app/C102351799" target="_blank">
     <img src="https://huaweimobileservices.com/wp-content/uploads/2020/02/Badge-White-800x240.png" width="250">
 </a>
+<br>
+<img src="https://www.yuklio.com/f/ym46M-qr-muhit-ag.png">
