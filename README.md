@@ -35,7 +35,7 @@
 
 ### To-do
 - Custom icon display for listed POIs
-- Added directions
+- Directions API
 - ...
 
 
@@ -74,7 +74,7 @@
 
 ### Yapılacaklar
 - Listelenen POI'ler için özel ikon gösterimi
-- Yol tarifi eklenecek
+- Yol tarifi eklenecek (Directions API)
 - ...
 
 
