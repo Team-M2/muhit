@@ -3,17 +3,14 @@
     xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
             <com.huawei.hms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/mapView"
                 android:layout_width="match_parent"
@@ -21,8 +18,8 @@
                 map:mapType="normal"
                 map:uiCompass="true"
                 map:uiZoomControls="true" />
-
             <LinearLayout
+                android:id="@+id/lnrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
@@ -93,53 +90,50 @@
 
 
             </LinearLayout>
-
-            <!--
-            <Button
-                android:id="@+id/btnClearMarkers"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_gravity="right|bottom"
-                android:layout_marginRight="60dp"
-                android:layout_marginBottom="52dp"
-                android:background="@drawable/rounded"
-                android:drawableLeft="@drawable/icon_delete"
-                android:drawablePadding="4dp"
-                android:onClick="clearAllMarkers"
-                android:padding="8dp"
-                android:text="@string/clearAllMarkers"
-                android:textAllCaps="false" />
-            -->
         </FrameLayout>
-
     </LinearLayout>
 
+    <FrameLayout
+        android:id="@+id/frmLoading"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded"
+        android:padding="32dp"
+        android:visibility="gone">
 
-    <!--
-    <com.sothree.slidinguppanel.SlidingUpPanelLayout
-        xmlns:sothree="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/sliding_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        sothree:umanoPanelHeight="68dp"
-        sothree:umanoShadowHeight="4dp">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:text="Main Content"
-            android:textSize="16sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center|top"
-            android:text="The Awesome Sliding Up Panel"
-            android:textSize="16sp" />
-    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
-    -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                map:srcCompat="@drawable/icon_big_marker" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="28dp"
+                android:gravity="center"
+                android:text="@string/try_to_find_location"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </FrameLayout>
 
 </RelativeLayout>

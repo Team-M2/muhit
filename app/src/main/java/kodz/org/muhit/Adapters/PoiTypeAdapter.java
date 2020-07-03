@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -24,7 +24,6 @@ public class PoiTypeAdapter extends ArrayAdapter<PoiTypeModel> {
         super(context, 0, poiList);
     }
 
-    @NotNull
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.poi_type_item, parent, false);
@@ -43,7 +42,6 @@ public class PoiTypeAdapter extends ArrayAdapter<PoiTypeModel> {
     }
 
 
-    @NotNull
     public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.poi_type_item, parent, false);

@@ -60,16 +60,15 @@ public class MapKit extends AppCompatActivity implements OnMapReadyCallback, Hua
 
     @Override
     public void onMapReady(HuaweiMap map) {
+        Log.d(Utils.TAG, "huaweiMap is ready");
+
         huaweiMap = map;
         huaweiMap.setMyLocationEnabled(true);
         huaweiMap.setOnMarkerClickListener(this);
         huaweiMap.setInfoWindowAdapter(new InfoWindowAdapter(((Activity) context).getLayoutInflater()));
-
         if (lastlatLng != null) {
             setCamera(lastlatLng);
         }
-
-        Log.d(Utils.TAG, "huaweiMap is ready");
     }
 
 
@@ -78,11 +77,14 @@ public class MapKit extends AppCompatActivity implements OnMapReadyCallback, Hua
         Log.d(Utils.TAG, "setCamera Latlng: " + latLng);
         lastlatLng = latLng;
 
-        if (huaweiMap == null) {
-            Log.d(Utils.TAG, "huaweiMap is null");
-        } else {
-            cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, zoom);
-            huaweiMap.animateCamera(cameraUpdate);
+        if(lastlatLng != null){
+            if (huaweiMap == null) {
+                Log.d(Utils.TAG, "huaweiMap is null");
+            } else {
+                cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, zoom);
+                huaweiMap.animateCamera(cameraUpdate);
+            }
+
         }
 
     }

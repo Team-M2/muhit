@@ -2,10 +2,17 @@ package kodz.org.muhit.Helpers;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Build;
+import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
 
 import androidx.core.app.ActivityCompat;
 
@@ -20,11 +27,14 @@ import java.util.Stack;
 
 import kodz.org.muhit.Models.PoiTypeModel;
 import kodz.org.muhit.R;
+import kodz.org.muhit.UI.MainActivity;
 
 public class Utils {
 
     public static final String TAG = "muhit";
     ArrayList<PoiTypeModel> poiTypeList;
+    public Boolean isLocationPermissionGranted = false;
+
 
     public static String getApiKey(Context context) {
 
@@ -35,31 +45,6 @@ public class Utils {
         } catch (UnsupportedEncodingException e) {
             Log.e(TAG, "encode apikey error");
             return null;
-        }
-    }
-
-    public void checkPermissions(Context context) {
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
-            if (ActivityCompat.checkSelfPermission(context,
-                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                    && ActivityCompat.checkSelfPermission(context,
-                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                String[] strings =
-                        {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
-                ActivityCompat.requestPermissions((Activity) context, strings, 1);
-            }
-        } else {
-            if (ActivityCompat.checkSelfPermission(context,
-                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                    && ActivityCompat.checkSelfPermission(context,
-                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                    && ActivityCompat.checkSelfPermission(context,
-                    "android.permission.ACCESS_BACKGROUND_LOCATION") != PackageManager.PERMISSION_GRANTED) {
-                String[] strings = {android.Manifest.permission.ACCESS_FINE_LOCATION,
-                        android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                        "android.permission.ACCESS_BACKGROUND_LOCATION"};
-                ActivityCompat.requestPermissions((Activity) context, strings, 2);
-            }
         }
     }
 
@@ -131,6 +116,81 @@ public class Utils {
             Integer c = colors.pop();
             recycle.push(c);
             return c;
+        }
+    }
+
+    public Boolean checkLocationServiceAvailability(final Context context) {
+        LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch (Exception ex) {
+        }
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch (Exception ex) {
+        }
+
+        if (!gps_enabled && !network_enabled) {
+            Log.d(TAG,"Util -> checkLocationServiceAvailability: False");
+            return false;
+        }
+        Log.d(TAG,"Util -> checkLocationServiceAvailability: True");
+        return true;
+    }
+
+    public void checkPermissions(Context context) {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+            if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                String[] strings = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
+                ActivityCompat.requestPermissions((Activity) context, strings, 1);
+                Log.d(TAG,"Util -> checkPermissions: False");
+            }else{
+                isLocationPermissionGranted = true;
+                Log.d(TAG,"Util -> checkPermissions: True");
+            }
+        } else {
+            if (ActivityCompat.checkSelfPermission(context,
+                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(context,
+                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(context,
+                    "android.permission.ACCESS_BACKGROUND_LOCATION") != PackageManager.PERMISSION_GRANTED) {
+                String[] strings = {
+                        android.Manifest.permission.ACCESS_FINE_LOCATION,
+                        android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                        "android.permission.ACCESS_BACKGROUND_LOCATION"
+                };
+                ActivityCompat.requestPermissions((Activity) context, strings, 2);
+                Log.d(TAG,"Util -> checkPermissions: False");
+            }else{
+                isLocationPermissionGranted = true;
+                Log.d(TAG,"Util -> checkPermissions: True");
+            }
+        }
+    }
+
+
+
+
+    public void openAppSettings(Context context, Activity activity) {
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        Uri uri = Uri.fromParts("package", activity.getPackageName(), null);
+        intent.setData(uri);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+
+    public static void toggleView(View view, Boolean show){
+        if(show){
+            view.setVisibility(View.VISIBLE);
+        }else{
+            view.setVisibility(View.GONE);
         }
     }
 }

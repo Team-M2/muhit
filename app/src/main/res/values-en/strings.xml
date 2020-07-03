@@ -6,6 +6,11 @@
     <string name="select_one">Make a choose</string>
     <string name="call">Make a Phone Call</string>
     <string name="poi_not_found">No Results Found!</string>
+    <string name="try_to_find_location">We are trying to obtain your location,\nplease wait a second.</string>
+    <string name="need_to_location_service">Uygulamayı kullanabilmeniz için konum servisini aktif etmeniz gerekmektedir.</string>
+    <string name="need_to_location_granted">Lütfen uygulamanın konum bilginize erişmesine izin verin</string>
+    <string name="go_to_setting">Ayarlara Git</string>
+    <string name="close_to_app">Uygulamayı Kapat</string>
 
 
     <string name="hospital">Hospital</string>
