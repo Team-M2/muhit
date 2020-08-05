@@ -34,7 +34,6 @@
 
 
 ### To-do
-- Custom icon display for listed POIs
 - Directions API
 - ...
 
