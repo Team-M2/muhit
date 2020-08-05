@@ -18,6 +18,21 @@
 ## This application is a reference application prepared to introduce the use of Map Kit, Location Kit and Site Kit used for location based operations within the Huawei Mobile Services (HMS) ecosystem.
 
 
+### Before Start
+
+You need to agconnect-services.json for run this project correctly.
+
+- If you don't have a Huawei Developer account check this document for create; https://developer.huawei.com/consumer/en/doc/start/10104
+- Open your Android project and find Debug FingerPrint (SHA256) with follow this steps; View -> Tool Windows -> Gradle -> Tasks -> Android -> signingReport
+- Login to Huawei Developer Console (https://developer.huawei.com/consumer/en/console)
+- If you don't have any app check this document for create; https://developer.huawei.com/consumer/en/doc/distribution/app/agc-create_app
+- Add SHA256 FingerPrint into your app with follow this steps on Huawei Console; My Apps -> Select App -> Project Settings
+- Make enable necessary SDKs with follow this steps; My Apps -> Select App -> Project Settings -> Manage APIs
+- For this project you have to set enable Location Kit, Map Kit and Site Kit
+- Than go again Project Settings page and click "agconnect-services.json" button for download json file. 
+- Move to json file in base "app" folder that under your android project. (https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/69407812#h1-1577692046342)
+
+
 ### Application Promotion
 
 - When you open the application, you will see a full screen map. This map is provided with the Huawei Map Kit.
