@@ -180,6 +180,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             PoiTypeModel poi = (PoiTypeModel) parent.getSelectedItem();
             if (poi.getType() != null) {
                 site.getPoiList(
+                        MainActivity.this,
                         poi.getType(),
                         poi.getName(),
                         poi.getIcon(),

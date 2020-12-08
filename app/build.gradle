@@ -9,9 +9,9 @@ android {
         applicationId "kodz.org.cevremdenevar"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-        resConfigs "tr","en"
+        versionCode 2
+        versionName "1.2"
+        resConfigs "tr", "en"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -26,16 +26,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
 
-    // HMS LocationKit
-    implementation 'com.huawei.hms:location:5.0.0.302'
+    // HMS Location Kit
+    implementation 'com.huawei.hms:location:5.0.4.300'
 
-    // HMS MapKit Kit
-    implementation 'com.huawei.hms:maps:4.0.1.302'
+    // HMS Map Kit
+    implementation 'com.huawei.hms:maps:5.0.5.301'
 
-    // HMS SiteKit Kit
-    implementation 'com.huawei.hms:site:4.0.3.300'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    // HMS Site Kit
+    implementation 'com.huawei.hms:site:5.0.5.301'
 }
 

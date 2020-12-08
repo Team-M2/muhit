@@ -1,5 +1,6 @@
 package kodz.org.muhit.Kits;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
@@ -36,16 +37,20 @@ public class SiteKit {
     }
 
 
-    public void getPoiList(final LocationType locationType, String query, final int icon, Coordinate coordinate, final Integer color) {
+    public void getPoiList(final Activity activity, final LocationType locationType, String query, final int icon, Coordinate coordinate, final Integer color) {
 
         if (map.huaweiMap != null) {
+
+            Utils.toggleView(activity.findViewById(R.id.frmLoading), true);
+            Utils.toggleView(activity.findViewById(R.id.txtFrmLoading), false);
+
             searchService = SearchServiceFactory.create(context, Utils.getApiKey(context));
             nearbySearchRequest = new NearbySearchRequest();
             nearbySearchRequest.setLocation(coordinate);
             nearbySearchRequest.setRadius(20000);
             nearbySearchRequest.setPoiType(locationType);
-            //nearbySearchRequest.setLanguage(Locale.getDefault().getLanguage());
-            //nearbySearchRequest.setQuery(query);
+            nearbySearchRequest.setLanguage(Locale.getDefault().getLanguage());
+            nearbySearchRequest.setQuery(query);
             //nearbySearchRequest.setPageIndex(1);
             //request.setPageSize(5);
 
@@ -60,6 +65,7 @@ public class SiteKit {
                     for (Site site : sites) {
                         map.addMarker(site, icon, locationType, color);
                     }
+                    Utils.toggleView(activity.findViewById(R.id.frmLoading), false);
                 }
 
 

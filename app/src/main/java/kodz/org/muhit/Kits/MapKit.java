@@ -18,6 +18,7 @@ import com.huawei.hms.maps.CameraUpdate;
 import com.huawei.hms.maps.CameraUpdateFactory;
 import com.huawei.hms.maps.HuaweiMap;
 import com.huawei.hms.maps.MapView;
+import com.huawei.hms.maps.MapsInitializer;
 import com.huawei.hms.maps.OnMapReadyCallback;
 import com.huawei.hms.maps.model.BitmapDescriptor;
 import com.huawei.hms.maps.model.BitmapDescriptorFactory;
@@ -54,8 +55,11 @@ public class MapKit extends AppCompatActivity implements OnMapReadyCallback, Hua
             mapViewBundle = savedInstanceState.getBundle(MAPVIEW_BUNDLE_KEY);
         }
         mapView.onCreate(mapViewBundle);
-        mapView.getMapAsync(this);
 
+        MapsInitializer.setApiKey("CV8Bi0AC7BMYpuAPzEU894pZJvwlzO8bIgR7z+aMSaZ+Dm6+CMNci6tZHJAeF0fHiAYvpFWy4iMxbGBFHCSSHwPyhTqs");
+        mapView.onCreate(mapViewBundle);
+
+        mapView.getMapAsync(this);
     }
 
     @Override
@@ -63,7 +67,7 @@ public class MapKit extends AppCompatActivity implements OnMapReadyCallback, Hua
         Log.d(Utils.TAG, "huaweiMap is ready");
 
         huaweiMap = map;
-        huaweiMap.setMyLocationEnabled(true);
+        //huaweiMap.setMyLocationEnabled(true);
         huaweiMap.setOnMarkerClickListener(this);
         huaweiMap.setInfoWindowAdapter(new InfoWindowAdapter(((Activity) context).getLayoutInflater()));
         if (lastlatLng != null) {
